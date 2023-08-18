@@ -10,7 +10,7 @@ class Cli < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/zeabur/cli/releases/download/v0.0.3/zeabur_0.0.3_darwin_amd64"
-      sha256 "55234d9652c0df85340bd3634d1d663c66181cc8822556687f0a96fe36bf5035"
+      sha256 "93b4625d9b46edfc52f5268367efc2851691761b19309525ddc60d41a998775a"
 
       def install
         bin.install "zeabur_0.0.3_darwin_amd64" => "zeabur"
@@ -18,7 +18,7 @@ class Cli < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/zeabur/cli/releases/download/v0.0.3/zeabur_0.0.3_darwin_arm64"
-      sha256 "b11a4a9dfc09bfb9a72a9bfa4429b078c9be2c4f82031dc579b4568b50106470"
+      sha256 "60ada3ffdeda3a5deda51ef4d5977bce505308af39544e10376be9a484ae19ab"
 
       def install
         bin.install "zeabur_0.0.3_darwin_arm64" => "zeabur"
@@ -27,20 +27,20 @@ class Cli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zeabur/cli/releases/download/v0.0.3/zeabur_0.0.3_linux_arm64"
-      sha256 "a4032c1502f3a36493e3d19a53c4540f5537f0d33be96fefd94e888ad4efe1bc"
-
-      def install
-        bin.install "zeabur_0.0.3_linux_arm64" => "zeabur"
-      end
-    end
     if Hardware::CPU.intel?
       url "https://github.com/zeabur/cli/releases/download/v0.0.3/zeabur_0.0.3_linux_amd64"
-      sha256 "53298bebb39b31f88e5cc4db73269b4f58ce2e68b78477965bb4aeba217a5852"
+      sha256 "80046e18f0de7f55d576e65cd23e554aaf29b2deee643173898739e5c8c2456a"
 
       def install
         bin.install "zeabur_0.0.3_linux_amd64" => "zeabur"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/zeabur/cli/releases/download/v0.0.3/zeabur_0.0.3_linux_arm64"
+      sha256 "ac031e93376ce70a83cddf1515bb14ca302bc87adafc001e3970ac98bf736777"
+
+      def install
+        bin.install "zeabur_0.0.3_linux_arm64" => "zeabur"
       end
     end
   end
