@@ -5,42 +5,42 @@
 class Cli < Formula
   desc "Zeabur's official command line tool"
   homepage "https://zeabur.com"
-  version "0.0.5"
+  version "0.0.6"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/zeabur/cli/releases/download/v0.0.5/zeabur_0.0.5_darwin_amd64"
-      sha256 "958d09e1ed6db42c8b97ba8a62fe4abba8b4437b8b3143bfa6acd4002e2e1112"
+      url "https://github.com/zeabur/cli/releases/download/v0.0.6/zeabur_0.0.6_darwin_amd64"
+      sha256 "88c3ee5cd6a92e29af83629fb2ebef785841a0270e08e7d7b725f7e3d024db31"
 
       def install
-        bin.install "zeabur_0.0.5_darwin_amd64" => "zeabur"
+        bin.install "zeabur_0.0.6_darwin_amd64" => "zeabur"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/zeabur/cli/releases/download/v0.0.5/zeabur_0.0.5_darwin_arm64"
-      sha256 "e220b73a4859e90f57655135c3b3c08d9dadae050ca1a9470c520e382fba4c84"
+      url "https://github.com/zeabur/cli/releases/download/v0.0.6/zeabur_0.0.6_darwin_arm64"
+      sha256 "a0a959d13291839939d4700e30085ee261dc1b0457ddf1cd266ab8cbf15008a0"
 
       def install
-        bin.install "zeabur_0.0.5_darwin_arm64" => "zeabur"
+        bin.install "zeabur_0.0.6_darwin_arm64" => "zeabur"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/zeabur/cli/releases/download/v0.0.5/zeabur_0.0.5_linux_amd64"
-      sha256 "bcbae3d90975f26be0fdb83032b6c528e843f99c2abebaeb7808138a9c0268be"
+      url "https://github.com/zeabur/cli/releases/download/v0.0.6/zeabur_0.0.6_linux_amd64"
+      sha256 "90192f9ac279217764ec96caafab29656ed907ec11a007ba570af51953bc6f81"
 
       def install
-        bin.install "zeabur_0.0.5_linux_amd64" => "zeabur"
+        bin.install "zeabur_0.0.6_linux_amd64" => "zeabur"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zeabur/cli/releases/download/v0.0.5/zeabur_0.0.5_linux_arm64"
-      sha256 "19b236119c148fa66ab5aca1c3fad8b4efd67bf8e99b108b27eb803a02d58b2b"
+      url "https://github.com/zeabur/cli/releases/download/v0.0.6/zeabur_0.0.6_linux_arm64"
+      sha256 "84d768ac3eac7613839f54eee6db51011cbbd91520f98016c32a1157e3f55a9d"
 
       def install
-        bin.install "zeabur_0.0.5_linux_arm64" => "zeabur"
+        bin.install "zeabur_0.0.6_linux_arm64" => "zeabur"
       end
     end
   end
