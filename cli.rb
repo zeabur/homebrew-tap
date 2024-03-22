@@ -5,42 +5,42 @@
 class Cli < Formula
   desc "Zeabur's official command line tool"
   homepage "https://zeabur.com"
-  version "0.2.2-beta1"
+  version "0.2.2-beta3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/zeabur/cli/releases/download/v0.2.2-beta1/zeabur_0.2.2-beta1_darwin_arm64"
-      sha256 "bfa8ae85ed2a384e6a8978b81e30e72d54d8700b36f71ba7a61be184ef12f076"
+      url "https://github.com/zeabur/cli/releases/download/v0.2.2-beta3/zeabur_0.2.2-beta3_darwin_arm64"
+      sha256 "73bf81fbcd71b7c61ef46f9528719207de0662ea5bade860b1540359a3ca9e32"
 
       def install
-        bin.install "zeabur_0.2.2-beta1_darwin_arm64" => "zeabur"
+        bin.install "zeabur_0.2.2-beta3_darwin_arm64" => "zeabur"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/zeabur/cli/releases/download/v0.2.2-beta1/zeabur_0.2.2-beta1_darwin_amd64"
-      sha256 "bcaa915fad812a6ac3711782de9951f9e8dc6907151c1e05498700089a0f23d6"
+      url "https://github.com/zeabur/cli/releases/download/v0.2.2-beta3/zeabur_0.2.2-beta3_darwin_amd64"
+      sha256 "d7a500ed49a7b4d12b85810f6b581b9ae0890127177cda5dd29cfbcc23e39b1c"
 
       def install
-        bin.install "zeabur_0.2.2-beta1_darwin_amd64" => "zeabur"
+        bin.install "zeabur_0.2.2-beta3_darwin_amd64" => "zeabur"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/zeabur/cli/releases/download/v0.2.2-beta1/zeabur_0.2.2-beta1_linux_amd64"
-      sha256 "4371850e1e4a1b95dcb0f057e1513a5385f22a838018bb828e739231250f5d5f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/zeabur/cli/releases/download/v0.2.2-beta3/zeabur_0.2.2-beta3_linux_arm64"
+      sha256 "b272f726c6558c5fef4eef42b69e4ea8de3b55ee5f0351a8d670b79c798237ab"
 
       def install
-        bin.install "zeabur_0.2.2-beta1_linux_amd64" => "zeabur"
+        bin.install "zeabur_0.2.2-beta3_linux_arm64" => "zeabur"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zeabur/cli/releases/download/v0.2.2-beta1/zeabur_0.2.2-beta1_linux_arm64"
-      sha256 "9689c0e8f26492d9d8ea12bbfc64bfc89d7b3ffcb11e8e661be0d14edd759f1e"
+    if Hardware::CPU.intel?
+      url "https://github.com/zeabur/cli/releases/download/v0.2.2-beta3/zeabur_0.2.2-beta3_linux_amd64"
+      sha256 "4a408fa374785b7e8de9e6225bf72ecca53fa50e2f7c649b3c976d644287c275"
 
       def install
-        bin.install "zeabur_0.2.2-beta1_linux_arm64" => "zeabur"
+        bin.install "zeabur_0.2.2-beta3_linux_amd64" => "zeabur"
       end
     end
   end
